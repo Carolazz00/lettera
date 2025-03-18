@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "B",
+  testo: "SWEET BABY",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
