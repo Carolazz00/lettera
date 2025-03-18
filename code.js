@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "SWEET BABY",
+  testo: "ZHU JIAQI",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
