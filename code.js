@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "ZHU JIAQI",
+  testo: "Z",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
@@ -36,32 +36,17 @@ export function disegnaPunto({
   beta = 0,
   gamma = 0,
 }) {
+  if (indice % 2 == 0) {
+    fill("skyblue");
+  } else {
+    fill("hotpink");
+  }
+  let v = noise(x, y, frameCount / 10);
+  rectMode(CENTER);
   push();
   translate(x, y);
-
-  noFill();
-  stroke(0);
-
-  // Use orientation data to influence color
-  // Map alpha (z-rotation) to hue (0-360)
-  const hue = map(alpha, 0, 360, 0, 360);
-
-  // Map beta (front-to-back tilt) to saturation (50-100)
-  const saturation = map(abs(beta), 0, 90, 50, 100);
-
-  // Map gamma (left-to-right tilt) to brightness (50-100)
-  const brightness = map(abs(gamma), 0, 90, 50, 100);
-
-  colorMode(HSB, 360, 100, 100);
-  fill(hue, saturation, brightness);
-  noStroke();
-
-  rectMode(CENTER);
-  rotate(frameCount + indice);
-
-  // Add slight variation based on device tilt
-  scale(1 + volume * 10 + (abs(gamma) / 90) * 0.5);
-  rect(0, 0, unita / 2);
+  rotate(v * 90);
+  rect(0, 0, v * 200, 10);
   pop();
 }
 
@@ -80,8 +65,9 @@ export function impostazioni() {
  */
 export function sotto(disegnaTesto) {
   background(255);
+  noStroke();
 
-  fill("deeppink");
+  fill("white");
   disegnaTesto();
 }
 
