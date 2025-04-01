@@ -1,9 +1,9 @@
 export const configurazione = {
-  testo: "Z",
+  testo: "A",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
-  percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
+  percorsoFont: "./assets/BAUHS93.TTF",
   mostraTestoSotto: true,
   mostraTestoSopra: false,
 };
