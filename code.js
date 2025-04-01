@@ -40,7 +40,7 @@ export function disegnaPunto({
   push();
   translate(x, y);
   rotate(frameCount);
-  image(img, 0, 0, 50, 50);
+  image(img, 0, 0, 100, 100);
   pop();
 }
 let img;
