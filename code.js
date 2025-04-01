@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "ZJQ",
+  testo: "Z",
   dimensione: 0.8,
   interlinea: 0.7,
   allineamento: "centro",
