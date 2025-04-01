@@ -36,27 +36,26 @@ export function disegnaPunto({
   beta = 0,
   gamma = 0,
 }) {
-  if (indice % 2 == 0) {
-    fill("skyblue");
-  } else {
-    fill("hotpink");
-  }
-  let v = noise(x, y, frameCount / 10);
-  rectMode(CENTER);
+  stroke("black");
   push();
   translate(x, y);
-  rotate(v * 90);
-  rect(0, 0, v * 200, 10);
+  rotate(frameCount);
+  image(img, 0, 25, 25);
   pop();
 }
+let img;
 
 //
 
-export function caricamentoRisorse() {}
+export function caricamentoRisorse() {
+  img = loadImage("./assets/image.png");
+}
 
 export function impostazioni() {
   frameRate(30);
   angleMode(DEGREES);
+  rectMode(CENTER);
+  imageMode(CENTER);
 }
 
 /**
@@ -76,7 +75,7 @@ export function sotto(disegnaTesto) {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sopra(disegnaTesto) {
-  //   stroke("white");
-  //   noFill();
-  //   disegnaTesto();
+  //stroke("white");
+  //noFill();
+  //disegnaTesto();
 }
